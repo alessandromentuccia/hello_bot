@@ -1,0 +1,37 @@
+version: '3.0' 
+
+services:
+  rasa:
+    image: rasa/rasa:2.0.2-full
+    container_name: hello_bot
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+#    env_file:
+#      - .env.production
+    command:
+      - run
+    networks:
+     - rasa_default
+
+  action_server:
+    container_name: hello_bot_actions
+    image: hello_bot
+    networks:
+      - rasa_default
+    ports:
+      - 5055:5055
+    volumes:
+      - ./:/app
+#    environment:
+#      - PSQL_HOST=unlockdb - PSQL_PORT=5432
+#    env_file:
+#      - .env.production
+#    command:
+#     - run
+#      - actions
+#      - -vv
+networks:
+  rasa_default:
+    external: true
