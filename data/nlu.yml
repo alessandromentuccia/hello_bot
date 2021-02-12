@@ -1,4 +1,5 @@
-nlu: 
+version: "2.0"
+nlu:
 - intent: greet
   examples: |
     - Hi
@@ -6,13 +7,15 @@ nlu:
     - Hallo
     - Good day
     - Good morning
-
+    - Ciao
+    - we
+    - ciao
+    - hei
 - intent: subscribe
   examples: |
     - I want to get the newsletter
     - Can you send me the newsletter?
     - Can you sign me up for the newsletter?
-
 - intent: inform
   examples: |
     - My email is example@example.com
