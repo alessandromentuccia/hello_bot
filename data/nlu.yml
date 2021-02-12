@@ -22,3 +22,6 @@ nlu:
     - random@example.com
     - Please send it to anything@example.com
     - Email is something@example.com
+- intent: nlu_fallback
+  examples: |
+    - che colore è il mio comune
