@@ -22,6 +22,8 @@ nlu:
     - random@example.com
     - Please send it to anything@example.com
     - Email is something@example.com
-- intent: nlu_fallback
+- intent: ask_bot
   examples: |
-    - che colore è il mio comune
+    - sei un bot
+    - ma tu sei un bot?
+    - sei un bot?
